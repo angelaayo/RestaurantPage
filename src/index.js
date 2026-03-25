@@ -1,2 +1,7 @@
 import "./style.css";
-console.log("Hello world");
+import {createHomePage} from "./home.js";
+
+const navigate = (()=>{
+    const outerContainer = document.querySelector("#content");
+    outerContainer.append(createHomePage());
+})();

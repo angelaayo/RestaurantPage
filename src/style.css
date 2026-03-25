@@ -1,4 +1,19 @@
 /* styles.css */
 body {
-  background-color: rebeccapurple;
+  background-color: rgb(220, 215, 224);
+}
+.homeContainer{
+  border: 1px solid green;
+}
+#content{
+  background-color: #F3F3E7;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+img{
+  height: 280px;
+  width: 100%;
 }
