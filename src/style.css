@@ -7,13 +7,19 @@ body {
 }
 #content{
   background-color: #F3F3E7;
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
 }
-img{
+.mainImg{
   height: 280px;
   width: 100%;
+}
+.infoContainer{
+  
+}
+.faveContainer{
+
 }
