@@ -1,4 +1,7 @@
 import mainPastaImg from "./mainPasta.jpg";
+import spicyPasta from "./pasta3.jpg";
+import meditPasta from "./pasta2.jpg";
+import tomatoPasta from "./pasta1.jpg";
 export function createHomePage(){
     const homeContainer = document.createElement("div");
     homeContainer.classList.add("homeContainer");
@@ -15,17 +18,19 @@ export function createHomePage(){
     const historyHeader = document.createElement("div");
     historyHeader.textContent = "Our History"
     ourHistory.textContent = "Spag Spot was born out of a simple love for spaghetti and good company, started by two friends who believed great pasta shouldn't be complicated."
-    infoDump.append(goalHeader, ourGoal, historyHeader, ourHistory);
+    infoDump.append(goalHeader, historyHeader, ourGoal, ourHistory);
     const faveHeader = document.createElement("div");
     faveHeader.textContent = "Our Favorites";
     //grid container
     const faveContainer = document.createElement("div");
     faveContainer.classList.add("faveContainer");
-    //const foodImages = ["salad.png", "burger.png", "tiramisu.png"];
+    const foodImages = [spicyPasta, meditPasta, tomatoPasta];
     for(let i=0; i<3; i++){
         const foodContainer = document.createElement('div');
+        foodContainer.classList.add("foodContainer");
         const foodImg = document.createElement("img");
-        //foodImg.src = foodImages[i];
+        foodImg.src = foodImages[i];
+        foodImg.classList.add("foodImages");
         const foodTitle = document.createElement("div");
         const foodDescription = document.createElement("div");
         foodContainer.append(foodImg, foodTitle, foodDescription);
