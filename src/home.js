@@ -1,10 +1,10 @@
-import mainPastaImg from "./mainPasta.jpg";
+import mainPastaImg from "./mainPasta2.jpg";
 import spicyPasta from "./pasta3.jpg";
 import meditPasta from "./pasta2.jpg";
 import tomatoPasta from "./pasta1.jpg";
 export function createHomePage(){
     const homeContainer = document.createElement("div");
-    homeContainer.classList.add("homeContainer");
+    homeContainer.id = "homeContainer";
     const imageHolder = document.createElement("img");
     imageHolder.classList.add("mainImg");
     imageHolder.src = mainPastaImg;
@@ -25,6 +25,7 @@ export function createHomePage(){
     const faveContainer = document.createElement("div");
     faveContainer.classList.add("faveContainer");
     const foodImages = [spicyPasta, meditPasta, tomatoPasta];
+    const foodTitles = ["Spicy Pasta With Sausage", "Mediterranean Chicken Pasta", "Tomato Sauce And Cheese Pasta"];
     for(let i=0; i<3; i++){
         const foodContainer = document.createElement('div');
         foodContainer.classList.add("foodContainer");
@@ -32,7 +33,9 @@ export function createHomePage(){
         foodImg.src = foodImages[i];
         foodImg.classList.add("foodImages");
         const foodTitle = document.createElement("div");
+        foodTitle.textContent = foodTitles[i];
         const foodDescription = document.createElement("div");
+        foodDescription.textContent = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.";
         foodContainer.append(foodImg, foodTitle, foodDescription);
         faveContainer.append(foodContainer);
     }
