@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   gap: 0.6rem;
 }
-#content{
+#main{
   background-color: #F5F9FF;
   max-width: 60%;
   margin: 0 auto;
@@ -74,7 +74,7 @@ body {
 }
 
 @media(max-width: 900px){
-  #content{
+  #main{
     max-width: 80%;
   }
   .infoContainer{
@@ -95,7 +95,7 @@ body {
   .mainImg{
     max-height: 9rem;
   }
-  #content{
+  #main{
     max-width: 95%;
   }
   .title{
