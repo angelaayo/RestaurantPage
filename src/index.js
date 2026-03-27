@@ -17,7 +17,7 @@ const navigate = (()=>{
 
     menuBtn.addEventListener("click", ()=>{
         contentContainer.innerHTML = "";
-        //contentContainer.append(createMenuPage());
+        contentContainer.append(createMenuPage());
     });
 
     contactBtn.addEventListener("click", ()=>{
