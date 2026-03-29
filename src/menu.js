@@ -3,6 +3,7 @@ export function createMenuPage (){
     const outerMostContainer = document.createElement("div");
     const menuHeader = document.createElement("div");
     menuHeader.textContent = "Menu";
+    menuHeader.className = "title"
     const mainContainer = document.createElement("div");
     mainContainer.className = "menuContainer";
 
@@ -18,7 +19,7 @@ export function createMenuPage (){
         else{
             menuInfo.append(imageHolder, textContainer);
         }
-        mainContainer.append(menuInfo)
+        mainContainer.append(menuInfo);
     });
     outerMostContainer.append(menuHeader, mainContainer);
 

@@ -5,6 +5,9 @@ import tomatoPasta from "./pasta1.jpg";
 export function createHomePage(){
     const homeContainer = document.createElement("div");
     homeContainer.id = "homeContainer";
+    const homeTitle = document.createElement("div");
+    homeTitle.textContent = "Spag Spot"
+    homeTitle.className = "title";
     const imageHolder = document.createElement("img");
     imageHolder.classList.add("mainImg");
     imageHolder.src = mainPastaImg;
@@ -39,7 +42,7 @@ export function createHomePage(){
         foodContainer.append(foodImg, foodTitle, foodDescription);
         faveContainer.append(foodContainer);
     }
-    homeContainer.append(imageHolder, infoDump, faveHeader, faveContainer);
+    homeContainer.append(homeTitle, imageHolder, infoDump, faveHeader, faveContainer);
     return homeContainer;
     
 }

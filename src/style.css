@@ -7,8 +7,10 @@ ul{
   padding: 0;
   margin: 0;
 }
+:root{
+  --main-color:#5A8A9F;
+}
 #homeContainer{
-  color: #5A8A9F;
   font-family: "Fredoka", sans-serif;
   display: flex;
   flex-direction: column;
@@ -16,18 +18,19 @@ ul{
 }
 #main{
   background-color: #F5F9FF;
-  max-width: 60%;
+  max-width: 50%;
   margin: 0 auto;
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 1rem;
+  color: var(--main-color)
 }
 .title{
-  color: #5A8A9F;
   text-align: center;
   font-family: "Tangerine", cursive;
   font-size: 4rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 .mainImg{
   max-height: 15rem;
@@ -42,7 +45,7 @@ ul{
   row-gap: 1rem;
 }
 .infoContainer > :nth-child(1), .infoContainer > :nth-child(2),
-.foodContainer > :nth-child(2), #homeContainer > :nth-child(3){
+.foodContainer > :nth-child(2), #homeContainer > :nth-child(4){
   font-weight: 300;
   font-size: 1.5rem;
 }
@@ -78,26 +81,48 @@ ul{
   grid-row: 1/3;
 }
 .menuContainer{
-  border: 4px solid orange;
+  padding: 0 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
 }
 .menuInfoContainer{
-  border: 3px solid purple;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .menuTextContainer{
-  border: 1px solid red;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
 }
+.menuTextContainer > :nth-child(1){
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 .menuItems{
-  border: 1px solid blue;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.menuItems > :last-child{
+  font-weight: 600;
 }
 .menuImg{
-  max-width: 12.5rem;
-  max-height: 12.5rem;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 0.4rem;
+  place-self: center;
+  border: 6px solid #ccdee99b;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-@media(max-width: 900px){
+@media(max-width: 1024px){
   #main{
     max-width: 80%;
   }
