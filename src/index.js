@@ -22,6 +22,6 @@ const navigate = (()=>{
 
     contactBtn.addEventListener("click", ()=>{
         contentContainer.innerHTML = "";
-        //contentContainer.append(createContactPage());
+        contentContainer.append(createContactPage());
     });
 })();
