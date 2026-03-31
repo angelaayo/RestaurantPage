@@ -9,6 +9,9 @@ ul{
 }
 :root{
   --main-color:#5A8A9F;
+  --main-font: "Fredoka", sans-serif;
+  --secondary-font: "Roboto slab", serif;
+  --cursive-font: "Tangerine", cursive;
 }
 #homeContainer{
   font-family: "Fredoka", sans-serif;
@@ -27,10 +30,11 @@ ul{
 }
 .title{
   text-align: center;
-  font-family: "Tangerine", cursive;
+  font-family: var(--cursive-font);
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  font-style: italic;
 }
 .mainImg{
   max-height: 15rem;
@@ -58,7 +62,7 @@ ul{
   column-gap: 1rem;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--secondary-font);
 }
 .foodContainer > :nth-child(3), .infoContainer > :nth-child(3),
 .infoContainer > :nth-child(4){
@@ -99,13 +103,13 @@ ul{
 
 }
 .menuTextContainer > :nth-child(1){
-  font-family: "Roboto Slab", serif;
+  font-family: var(--secondary-font);
   font-weight: 400;
   font-size: 2rem;
 }
 
 .menuItems{
-  font-family: "Fredoka", sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
   display: flex;
   justify-content: space-between;
@@ -120,6 +124,68 @@ ul{
   place-self: center;
   border: 6px solid #ccdee99b;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.contactContainer{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.contactContainer > :nth-child(2), .contactContainer > :nth-child(3){
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 0.6rem;
+  font-family: var(--main-font);
+}
+.contactContainer > :nth-child(2){
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  font-style: italic;
+}
+
+.contactInfo{
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cardBox{
+  border: 2px solid #ccdee9;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  border-radius: 0.5rem;
+}
+.cardBox > :nth-child(2), .cardBox > :nth-child(3){
+  font-family: var(--secondary-font);
+}
+.iconImg{
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.mapImg{
+  max-width: 80%;
+  max-height: 80%;
+}
+
+button{
+  background-color: #afccde;
+  border-radius: 0.5rem;
+  padding: 0 0.8rem;
+  border: 1px solid #ccdee9;
+  height: 2rem;
+  font-family: var(--main-font);
+}
+footer{
+  font-family: var(--secondary-font);
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media(max-width: 1024px){
@@ -149,5 +215,8 @@ ul{
   }
   .title{
     margin-bottom: 1rem;
+  }
+  .contactInfo{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
